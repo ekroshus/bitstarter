@@ -70,7 +70,7 @@ if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to cheese.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-        .option('-u, --url <url> ', 'url of html file', URL_DEFAULT)
+        .option('-u, --url <url> ', 'url of html file')
         .parse(process.argv);
    
 if (program.url !=null){
