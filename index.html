@@ -98,11 +98,90 @@
         color: #ccccff;
       }
     </style>
+    
+    <title> Slideshow </title>
+    <script language="Javascript" type="text/javascript">
+      <!--
+	  Pictures= new Array(
+	             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBDOjh3Cx7NSokwqe3HWFu8PfKcH8PtlF2Po1QLHZ\
+ZU-45mG9","https://lh5.ggpht.com/MlEp50BwuImUPdGdN8lx2P0hzotlDPUvqdBIGUnZqlyT36N-0efIpJaBSxkA1rJMPrY=h900", "http://t2.gstatic.com/images?q=tbn:ANd9GcQKDejih_V1KwRZdCOBGApFlzT1CaiKzfG4CbUfdc2RROry-yE3rhMrCpIP")
+	CurrentPicture=0
+	
+function RunSlideShow(ForwardBack){
+
+      if  (document.images){
+          CurrentPicture = CurrentPicture + ForwardBack
+	  if (CurrentPicture > (Pictures.length-1) )    {
+	      CurrentPicture=0
+	  }
+	  if(CurrentPicture< 0){
+	      CurrentPicture=Pictures.length-1
+	  }
+	 
+	  document.PictureDisplay.src=Pictures[CurrentPicture]
+	  
+}}
+      
+      
+	  -->
+      </script>
+
+    <title> Evaluating check boxes </title>
+    <script language="Javascript" type="text/javascript">
+      <!--
+	  function umwelt_options()
+	  {
+	    var selection="You are now signed up to receive product information, release dates and beta versions of: "
+	    with(document.forms.Contact)
+	    {
+	    if(MAPS.checked==true)
+	    {
+	      selection+="Maps"
+	      }
+	    if (GPS.checked==true)
+	    {
+	      selection+=" GPS"
+	      }
+	    if (GG.checked==true)
+	    {
+	      selection+=" Google Glass"
+	      }
+	    }
+	    alert(selection)
+	    }
+	    -->
+        </script>
+
+
+
   </head>
   <body>
+    <div style="position: absolute; left: 600px; top: 400px;">
+    <b>Sign up for your preferred modalities by checking the boxes below:</b>
+    <FORM name="Contact"
+	   " method="post">
+      <P>
+	<INPUT TYPE="checkbox"
+	       name="MAPS" value="MAPS">Maps
+	<BR>
+	<INPUT TYPE="checkbox"
+	       name="GPS" value="GPS">GPS
+	<BR>
+	<INPUT TYPE="checkbox"
+	       name="GG" value="GG">Google Glass
+	<BR>
+	<INPUT name="Sign Up" value="Sign Up"
+	       type=reset onclick="umwelt_options()" >
+	</P>
+      </FORM>
+   </div>
 
-    <!-- Mobile-friendly navbar adapted from example. -->
+
+
+
+ <!-- Mobile-friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+    
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -136,6 +215,7 @@
           <h1>UMWELT</h1>
         </div>
       </div> 
+    
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
@@ -143,11 +223,11 @@
           <p class="lead">Create your environment.  Change your life.</p>
         </div>
       </div>
+    <div style="position:absolute;left:850px;top:150px">
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://www.buzzle.com/img/articleImages/274578-5765-15.jpg" onmouseover="src='http://www.bitrebels.com/wp-content/uploads/2009/10/microscope-2.jpg'" onmouseout="src='http://www.buzzle.com/img/articleImages/274578-5765-15.jpg'">
-        </div>
-
+            </div>
+	
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
           <div class="span8 offset2">
@@ -193,31 +273,46 @@
           </div>
         </div>
       </div>
-
+      </div>
+       <div style="position:absolute; left: 10px ; top :500px;">
       <!-- Beyond this part the marketing copy begins. -->
       <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
+     
+      <div style="position:absolute;left:150px;top:-200px">
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
           <img class="img-polaroid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBDOjh3Cx7NSokwqe3HWFu8PfKcH8PtlF2Po1QLHZZU-45mG9">
-        </div>
-        <div class="span5 copy">
+	  <input type="button" value="Forward"
+		 onclick="RunSlideShow(1)">
+	  <input type="button" value="Back"
+		 onclick="RunSlideShow(-1)">
+       
+	</div>
+	</div>
+        <div style="position: absolute; left:800px;top:200px">
+	<div class="span5 copy">
           <p>
            Umwelt is the German word for 'environment or surroundings'.  Our product offers you a way to alter and modulate your very own Umwelt.  Change your environment, change your life.  
           </p>
         </div>
       </div>
-
+	</div>
+      
       <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
+        
+	<div class="span5 offset1 copy copy-right">
           <p>
             We suggest textbook usages of our product, however, its only limitations are your own creativity to apply it to your own circumstances.  
           </p>
+        
+	</div>
+       <div style="position:absolute ; left: 750px; top:-300px">
+	<div class="span5 asset">
+          <IMG src="http://www.abc.net.au/reslib/201106/r791135_6885885.jpg" width="1500" height="750" onmouseover="src='http://www.prontor.de/data/unternehmen/Umwelt_1187849849.jpg'" width="1500" height="750" onmouseout="src='http://www.abc.net.au/reslib/201106/r791135_6885885.jpg'" width="1500" height="750" >
         </div>
-        <div class="span5 asset">
-          <IMG height="480" width="304" src="http://www.abc.net.au/reslib/201106/r791135_6885885.jpg" onmouseover="src='http://www.prontor.de/data/unternehmen/Umwelt_1187849849.jpg'" onmouseout="src='http://www.abc.net.au/reslib/201106/r791135_6885885.jpg'" >
-        </div>
+      </div>
       </div>
 
       <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
@@ -270,6 +365,7 @@
         </div>
       </div>
     </div>
+</div>
   </body>
 </html>
 
