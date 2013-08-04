@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>UMWELT</title>
+    <title>My First Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -97,91 +97,170 @@
       .footer a {
         color: #ccccff;
       }
+    
+      #form 
+      {
+        position: absolute;
+        left: 30px;
+        top: 100px;
+      }
+      
+      #middle_column1
+      {
+        position: absolute;
+        left: 817px;
+        top: 80.25px;
+      }
+      
+
+      #middle_column2
+      {
+        position: absolute;
+        left: 817px;
+        top : 500px;
+      }
+
+      #copy_1
+      {
+        position: absolute;
+        left: 50px;
+        top:700px;
+        width: 400px;
+        height: 200px;
+      }
+      
+      #copy_2
+      {
+        position: absolute;
+        right: 100px;
+        top : 700px;
+        width: 400px;
+        height: 200px;
+      }
+      
+      #picture_1
+      {
+        position: absolute;
+        left:620px;   
+        top:700px ;
+      }
+     
+      #bottom
+      {
+        position: absolute;
+        top:1200px;
+      }
+      #chart
+      {
+        position:absolute;
+        left:1200px ;
+        top:100px ;
+
+      #button1
+      {
+        position:absolute;
+        left:800px ;
+        top:450px  ;
+      }
+
+      #button2
+      {
+        position:absolute;
+        left:900px ;
+        top:500px  ;
+      }
+      #title1
+      {
+        position:absolute;
+        left:817px;
+        top:450px;
+      }
     </style>
+
     
-    <title> Slideshow </title>
-    <script language="Javascript" type="text/javascript">
-      <!--
-	  Pictures= new Array(
-	             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBDOjh3Cx7NSokwqe3HWFu8PfKcH8PtlF2Po1QLHZ\
-ZU-45mG9","https://lh5.ggpht.com/MlEp50BwuImUPdGdN8lx2P0hzotlDPUvqdBIGUnZqlyT36N-0efIpJaBSxkA1rJMPrY=h900", "http://t2.gstatic.com/images?q=tbn:ANd9GcQKDejih_V1KwRZdCOBGApFlzT1CaiKzfG4CbUfdc2RROry-yE3rhMrCpIP")
-	CurrentPicture=0
-	
-function RunSlideShow(ForwardBack){
 
-      if  (document.images){
-          CurrentPicture = CurrentPicture + ForwardBack
-	  if (CurrentPicture > (Pictures.length-1) )    {
-	      CurrentPicture=0
-	  }
-	  if(CurrentPicture< 0){
-	      CurrentPicture=Pictures.length-1
-	  }
-	 
-	  document.PictureDisplay.src=Pictures[CurrentPicture]
-	  
-}}
-      
-      
-	  -->
-      </script>
 
-    <title> Evaluating check boxes </title>
-    <script language="Javascript" type="text/javascript">
-      <!--
-	  function umwelt_options()
-	  {
-	    var selection="You are now signed up to receive product information, release dates and beta versions of: "
-	    with(document.forms.Contact)
-	    {
-	    if(MAPS.checked==true)
-	    {
-	      selection+="Maps"
-	      }
-	    if (GPS.checked==true)
-	    {
-	      selection+=" GPS"
-	      }
-	    if (GG.checked==true)
-	    {
-	      selection+=" Google Glass"
-	      }
-	    }
-	    alert(selection)
-	    }
-	    -->
-        </script>
+<title>onblur event</title>
+<script language="Javascript" type="text/javascript">
+<!--
+function ValidateEmail(EmailAddress)
+{
+var Location=EmailAddress.indexOf('@')
+if (Location == -1)
+{
+    alert ('You entered an inaccurate email address')
+}
+}
+-->
+</script>
+
+<title> DropDown </title>
+<script language="Javascript" type="text/javascript">
+<!--
+function ShowHide(divId)
+{
+if(document.getElementById(divId).style.display=='none')
+{
+document.getElementById(divId).style.display='block';
+}
+else
+{
+document.getElementById(divId).style.display='none';
+}
+}
+-->
+</script>
+
+
+</head>
+<body>
+
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+Copyright EMK International
+ </div> 
+
+<div id="middle_column1" style="background-color:#FFA500; height: 200px;width: 50px; "></div>
 
 
 
-  </head>
-  <body>
-    <div style="position: absolute; left: 600px; top: 400px;">
-    <b>Sign up for your preferred modalities by checking the boxes below:</b>
-    <FORM name="Contact"
-	   " method="post">
-      <P>
-	<INPUT TYPE="checkbox"
-	       name="MAPS" value="MAPS">Maps
-	<BR>
-	<INPUT TYPE="checkbox"
-	       name="GPS" value="GPS">GPS
-	<BR>
-	<INPUT TYPE="checkbox"
-	       name="GG" value="GG">Google Glass
-	<BR>
-	<INPUT name="Sign Up" value="Sign Up"
-	       type=reset onclick="umwelt_options()" >
-	</P>
-      </FORM>
-   </div>
+<div id="middle_column2" style="background-color:#FFA500; height: 200px;width: 50px; "></div>
+
+<div id="button2">
+<a onclick="javascript: ShowHide('chart')" href="javascript:;"> Help Us Reach Our Funding Goal!</a>
+</div>
+
+
+<!--drop down -->
+
+<div id=" button1">
+<a onclick="javascript: ShowHide('form')" href="javascript:;"> Sign up Now! </a>
+</div>
+
+<!--form for email submission -->
+<div class="mid" id="form" style="DISPLAY: none">
+<BR>
+
+<FORM>
+<P>
+<BR>First Name:<INPUT type="text" name="Fname"/><BR>
+Last Name: <INPUT type="text" name ="Lname"/><BR>
+Email: <INPUT type="text" name="Email" 
+	      onblur="ValidateEmail (this.value)"/><BR>
+<INPUT name="Submit" value="Submit" type="submit"/>
+<INPUT name="Reset" value="Reset" type="reset"/>
+</P>
+</FORM>
+</div>
 
 
 
 
- <!-- Mobile-friendly navbar adapted from example. -->
+
+
+
+<!-- Mobile-friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -202,8 +281,8 @@ function RunSlideShow(ForwardBack){
         </div>
       </div>
     </div>
-
-    <!-- We use row-fluid inside containers to achieve a resizable layout. -->
+    
+   <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
     <!-- http://stackoverflow.com/a/12270322 -->
     <div class="container">
@@ -212,26 +291,27 @@ function RunSlideShow(ForwardBack){
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>UMWELT</h1>
+          <h1>Product: Development Version</h1>
         </div>
       </div> 
-    
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">Create your environment.  Change your life.</p>
+          <p class="lead">One sentence description.</p>
         </div>
       </div>
-    <div style="position:absolute;left:850px;top:150px">
       <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
-            </div>
-	
-        <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
+               
+
+<!--form for email submission -->
+<div class="mid" id="chart" style="DISPLAY: none">
+ 
+  <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
+          <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="statistics">
+            <div class="row-fluid statistics">
               <div class="span4">
                 <!-- linediv-l and linediv-r give dividing lines that look
                 different in horizontal and vertical layouts, illustrating
@@ -252,6 +332,7 @@ function RunSlideShow(ForwardBack){
               </div>
             </div>
           </div>
+          <div class="row-fluid">
           <div class="span10 offset1">
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
@@ -260,62 +341,62 @@ function RunSlideShow(ForwardBack){
               <div class="bar bar-warning" style="width: 40%;"></div>
             </div>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
             <button class="btn btn-success btn-large">Preorder</button>
           </div>
+          </div>
+          <div class="row-fluid">
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
             <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
             <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
+          </div>
+        </div>
         </div>
       </div>
-      </div>
-       <div style="position:absolute; left: 10px ; top :500px;">
+       
       <!-- Beyond this part the marketing copy begins. -->
       <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
      
-      <div style="position:absolute;left:150px;top:-200px">
+      
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBDOjh3Cx7NSokwqe3HWFu8PfKcH8PtlF2Po1QLHZZU-45mG9">
-	  <input type="button" value="Forward"
-		 onclick="RunSlideShow(1)">
-	  <input type="button" value="Back"
-		 onclick="RunSlideShow(-1)">
        
-	</div>
-	</div>
-        <div style="position: absolute; left:800px;top:200px">
-	<div class="span5 copy">
+	
+	
+       
+	<div id="copy_1" class="span5 copy"  >
           <p>
-           Umwelt is the German word for 'environment or surroundings'.  Our product offers you a way to alter and modulate your very own Umwelt.  Change your environment, change your life.  
+           Umwelt is the German word for 'environment or surroundings'.  Our product offers you a way to alter and modulate your very own Umwelt.  <a href="https://en.wikipedia.org/wiki/Umwelt" target="_blank">Discover Umwelt today!</a>  
           </p>
-        </div>
+        
       </div>
 	</div>
       
       <div class="row-fluid section2">
         
-	<div class="span5 offset1 copy copy-right">
+	<div id="copy_2" class="span5 offset1 copy copy-right"">
           <p>
             We suggest textbook usages of our product, however, its only limitations are your own creativity to apply it to your own circumstances.  
           </p>
         
 	</div>
-       <div style="position:absolute ; left: 750px; top:-300px">
-	<div class="span5 asset">
-          <IMG src="http://www.abc.net.au/reslib/201106/r791135_6885885.jpg" width="1500" height="750" onmouseover="src='http://www.prontor.de/data/unternehmen/Umwelt_1187849849.jpg'" width="1500" height="750" onmouseout="src='http://www.abc.net.au/reslib/201106/r791135_6885885.jpg'" width="1500" height="750" >
-        </div>
+      
+	<div id="picture_1" class="span5 asset">
+          <IMG src="http://www.abc.net.au/reslib/201106/r791135_6885885.jpg" width="350" height="300" onmouseover="src='http://www.prontor.de/data/unternehmen/Umwelt_1187849849.jpg'" width="350" height="300" onmouseout="src='http://www.abc.net.au/reslib/201106/r791135_6885885.jpg'" width="350" height="300" >
+        
       </div>
       </div>
 
-      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+     <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
       <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
@@ -365,7 +446,5 @@ function RunSlideShow(ForwardBack){
         </div>
       </div>
     </div>
-</div>
   </body>
 </html>
-
