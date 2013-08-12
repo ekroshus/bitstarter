@@ -175,6 +175,7 @@
         left:817px;
         top:450px;
       }
+<<<<<<< HEAD
       /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
  div.addthis_toolbox {
   width:180px;
@@ -183,6 +184,26 @@
 
 
 
+=======
+
+      #footer1
+      {
+        position:absolute;
+        bottom: 0px;
+      }
+      #pagetitle
+      {
+        position: absolute;
+        left:800px;
+        top:300px;
+      }
+      #description
+      {
+        position:absolute;
+        left:450px;
+        top:350px;
+      }
+>>>>>>> develop
     </style>
 
     
@@ -328,15 +349,19 @@ Email: <INPUT type="text" name="Email"
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product: Development Version</h1>
-        </div>
+	  <div id="pagetitle">
+          <h1> Development Version</h1>
+</div>       
+ </div>
       </div> 
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
-        </div>
+<div id="description">         
+ <p class="lead">One sentence description.</p>
+</div>       
+ </div>
       </div>
       <div class="row-fluid pitch">
                
@@ -460,13 +485,14 @@ s://coinbase.com/assets/button.js" type="text/javascript"></script>
         
       </div>
       </div>
-
+      
      <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
       <!-- This brings in jquery.js and bootstrap.js as dependencies. -->
       <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
           <div class="span10 offset1">
-            <h3>FAQ</h3>
+<div id="footer1">         
+   <h3>FAQ</h3>
             <div class="accordion" id="accordion2">
               <div class="accordion-group">
                 <div class="accordion-heading">
@@ -496,7 +522,7 @@ s://coinbase.com/assets/button.js" type="text/javascript"></script>
               </div>
             </div>
           </div>
-
+</div>
       </div>
 
       <!-- Not crucial, but we put this under a CC By-SA 3.0 license. -->
